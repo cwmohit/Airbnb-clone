@@ -1,0 +1,38 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+.homeImg{
+  background: url('https://images.unsplash.com/photo-1542681575-352258e0c854?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+    background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      min-height: 60vh;
+}
+.roomHeader{
+  background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      min-height: 60vh;
+}
+.loginRow{
+  margin-top: 30px;
+}
+.auth{
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+}
+.authButtons{
+  display: flex;
+    justify-content: center;
+}
+.roomTitle{
+  justify-content: center;
+}
+.card{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px!important;
+}
