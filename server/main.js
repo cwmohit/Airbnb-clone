@@ -4,6 +4,7 @@ import { AirbnbCollection } from '/imports/api/AirbnbCollection';
 import {UsersCollection} from '../imports/api/UserCollection'
 import {RoomCollection} from '../imports/api/RoomCollection';
 import {ReviewCollection} from '../imports/api/ReviewCollection';
+import {BookingCollection} from '../imports/api/BookingCollection';
 function insertLink({ title, url }) {
   AirbnbCollection.insert({title, url, createdAt: new Date()});
 }
@@ -16,6 +17,9 @@ function insertRoom({title,city,description,selectedFile,price,rating}){
 }
 function insertReview({userId,roomId,description}){
   ReviewCollection.insert({userId,roomId,description,createdAt: new Date()})
+}
+function insertBooking({userId,roomId,Guests,Start,End,Booking}){
+  BookingCollection.insert({userId,roomId,Guests,Start,End,Booking,createdAt: new Date()})
 }
 const insertData = data => AirbnbCollection.insert({ title: data });
  
@@ -133,5 +137,16 @@ Meteor.startup(() => {
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     }
     insertReview(review);
+  }
+  if(BookingCollection.find().count()===0){
+    const book={
+      userId: "LauAxkSa8ja2ny27M",
+      roomId: "A2gvy3CzQt2KyB4rX",
+      Guests: 2,
+      Start: "",
+      End: "",
+      Booking: "Active"
+    }
+    insertBooking(book);
   }
 });

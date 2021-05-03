@@ -3,15 +3,23 @@ import { useTracker } from 'meteor/react-meteor-data';
 import { useParams } from 'react-router-dom';
 import { RoomCollection } from '../../api/RoomCollection';
 import {ReviewCollection} from '../../api/ReviewCollection';
+import {BookingCollection} from '../../api/BookingCollection';
 import ReviewUser from './ReviewUser'
 export default function Room() {
     const [review,setReview]=useState({
         userId: "",  roomId: "", description: ""
     });
+    const [booking,setBooking]=useState({
+        userId: "", roomId: "", Guests: 0, Start: "", End: "", Booking: ""
+    })
+    const [bookButton,setBookButton]=useState("d-none");
     const { id } = useParams();
     const room = useTracker(() => RoomCollection.find({ _id: id }).fetch());
     const reviewResult = useTracker(() => ReviewCollection.find({ roomId: id }).fetch());
     const user=JSON.parse(localStorage.getItem("user"))._id;
+    const Availability = useTracker(() => BookingCollection.find({ roomId: id, Start: booking.Start, End: booking.End, Booking: "Active" }).fetch());
+     
+
     const onReviewSubmit=(e)=>{
       e.preventDefault();
       if(JSON.parse(localStorage.getItem("user"))._id){
@@ -27,10 +35,30 @@ export default function Room() {
      })
     }
    const CheckClick = (e)=>{
-    e.preventDefault();
-    alert("Available")
+       e.preventDefault();
+      
+    if(Availability.length){
+        alert("Not Available, try different dates")
+        setBookButton('d-none')
+    }else{
+        setBookButton('d-block')
+        alert("Available You Can Book")
+    }
+   
    }
-
+  const bookRoom = (e)=>{
+    e.preventDefault();
+    const book = confirm("Are you sure!");
+    e.preventDefault();
+   
+    if(book){
+        BookingCollection.insert({
+            userId: booking.userId, roomId: booking.roomId, Guests: booking.Guests, Start: booking.Start, End: booking.End, Booking: "Active"
+        })
+        alert("Booking Successfull")
+        setBookButton('d-none')
+    }
+  }
 
     const renderReviews=reviewResult.map((reviewInstance)=>
 
@@ -95,14 +123,14 @@ export default function Room() {
                                                 <div className="form-row ">
                                                     <div className="col-6">
                                                         <label>Check-In</label>
-                                                        <input type="date" className="form-control" />
+                                                        <input value={booking.Start} onChange={(e)=>setBooking({...booking, userId: user, roomId: id, Start: e.target.value})} type="date" className="form-control" />
                                                     </div>
 
                                                     <div className="col-6">
                                                         <label>Check-Out</label>
-                                                        <input type="date" className="form-control" />
+                                                        <input value={booking.End} onChange={(e)=>setBooking({...booking, userId: user, roomId: id, End: e.target.value})} type="date" className="form-control" />
                                                     </div>
-                                                    <select className="form-control my-2">
+                                                    <select value={booking.Guests} onChange={(e)=>setBooking({...booking, userId: user, roomId: id, Guests: e.target.value})} className="form-control my-2">
                                                         <option>1 Guest</option>
                                                         <option>2 Guest</option>
                                                         <option>3 Guest</option>
@@ -111,6 +139,8 @@ export default function Room() {
                                                     </select>
                                                 </div>
                                                 <button onClick={CheckClick} className="btn btn-outline-danger btn-block">Check Availability</button>
+                                                <button onClick={bookRoom}  className={bookButton+" btn btn-outline-success btn-block"}  
+                                                >Book</button>
                                             </form>
 
                                         </div>
