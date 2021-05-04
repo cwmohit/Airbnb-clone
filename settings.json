@@ -1,0 +1,7 @@
+{
+    "eu-west-1.galaxy.meteor.com": {
+       "env": {
+         "MONGO_URL": "mongodb+srv://admin:admin1211@cluster0.pyopf.mongodb.net/Airbnb-clone?retryWrites=true&w=majority"
+       }
+     }
+  }

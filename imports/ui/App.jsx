@@ -6,6 +6,7 @@ import Auth from './components/Auth.js';
 import Room from './components/Room.js';
 import Search from './components/Search.js';
 import Footer from './components/Footer';
+import ScrollTop from './components/ScrollTop';
 export const UserContext=React.createContext();
 
 export const App = () => {
@@ -23,6 +24,7 @@ useEffect(() => {
   
   return(
   <HashRouter>  
+  <ScrollTop/>
    <UserContext.Provider value={setUser}>
 
    <Header user={user}/>
