@@ -13,12 +13,6 @@ export const App = () => {
     userLogin: false, userId: ''
   })
 
-//  useEffect(()=>{
-//    if(user.userLogin===false){
-//   }
-// })
-
-
 useEffect(() => {
    
   if(user.userLogin===false){
@@ -37,26 +31,16 @@ useEffect(() => {
   console.log(user)
 },[user])
 
-
-
   return(
   <HashRouter>  
   <ScrollTop/>
    <UserContext.Provider value={setUser}>
-
    <Header user={user}/>
-
    </UserContext.Provider>
   <Switch>
-
-
     <Route path='/' exact component={()=><Home />}/>
-
-
-    <Route path='/Room/:id' component={Room}/>
-   
+    <Route path='/Room/:id' component={Room}/> 
        <Route path='/search/:searchKey' component={Search}/>
-   
    <UserContext.Provider value={setUser}>
     <Route path='/Auth' exact render={()=>JSON.parse(localStorage.getItem("user")).userLogin==="true"?<Redirect to='/' />: <Auth/>}/>
    </UserContext.Provider>

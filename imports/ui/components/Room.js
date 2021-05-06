@@ -36,18 +36,22 @@ export default function Room() {
     }
    const CheckClick = (e)=>{
        e.preventDefault();
-     if(booking.Start!==""){
-        if(Availability.length){
-            alert("Not Available, try different dates")
-            setBookButton('d-none')
-        }else{
-            setBookButton('d-block')
-            alert("Available You Can Book")
-        }
-     }else{
-      alert("PLease fill the dates")
-     }
- 
+       if(user!=="" ){  
+        if(booking.Start!=="" ){
+            if(Availability.length){
+                alert("Not Available, try different dates")
+                setBookButton('d-none')
+            }else{
+                setBookButton('d-block')
+                alert("Available You Can Book")
+            }
+         }else{
+          alert("PLease fill the dates")
+         }    
+       }else{
+           alert("pease login first")
+       }
+   
    
    }
   const bookRoom = (e)=>{

@@ -25,7 +25,7 @@ export default function Header({user}) {
          }
      }
     return (
-        <div className="container-fluid" style={{background: "black"}}>
+        <div className="container-fluid " style={{background: "black"}}>
 
         <div className="container">
             <nav className="navbar  py-2 navbar-expand-lg navbar-dark " style={{background: "black"}}>
