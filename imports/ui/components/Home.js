@@ -21,10 +21,12 @@ export default function Home() {
                     <div className="d-flex justify-content-center">
 
                         <form className="form-inline s my-2 my-lg-0" onSubmit={onHandleSubmit}>
-                            <input className="form-control mr-sm-2" type="search" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Location...." aria-label="Search" />
-                            <Link to={"search/" + search}>
+                            <input className="form-control mr-sm-2" type="search" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Location...." aria-label="Search" required/>
+                           {
+                               search===""?  <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> :<Link to={"search/" + search}>
                                 <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                             </Link>
+                           }
                         </form>
                     </div>
 

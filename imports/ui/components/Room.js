@@ -36,14 +36,18 @@ export default function Room() {
     }
    const CheckClick = (e)=>{
        e.preventDefault();
-      
-    if(Availability.length){
-        alert("Not Available, try different dates")
-        setBookButton('d-none')
-    }else{
-        setBookButton('d-block')
-        alert("Available You Can Book")
-    }
+     if(booking.Start!==""){
+        if(Availability.length){
+            alert("Not Available, try different dates")
+            setBookButton('d-none')
+        }else{
+            setBookButton('d-block')
+            alert("Available You Can Book")
+        }
+     }else{
+      alert("PLease fill the dates")
+     }
+ 
    
    }
   const bookRoom = (e)=>{
@@ -85,9 +89,9 @@ export default function Room() {
                                 </div>
                             </div>
                         </div>
-                        <div className="container">
+                        <div className="container" >
                             <div className="row">
-                                <div className="col-lg-8 col-md-8 col-12 order-1 order-md-0 order-lg-0">
+                                <div className="col-lg-8 col-md-8 mt-4 col-12 order-1 order-md-0 order-lg-0">
                                     <div className="Accessibility">
                                         <h3>Accessibility</h3>
                                         {room.description}
@@ -123,12 +127,12 @@ export default function Room() {
                                                 <div className="form-row ">
                                                     <div className="col-6">
                                                         <label>Check-In</label>
-                                                        <input value={booking.Start} onChange={(e)=>setBooking({...booking, userId: user, roomId: id, Start: e.target.value})} type="date" className="form-control" />
+                                                        <input value={booking.Start} onChange={(e)=>setBooking({...booking, userId: user, roomId: id, Start: e.target.value})} type="date" className="form-control" required/>
                                                     </div>
 
                                                     <div className="col-6">
                                                         <label>Check-Out</label>
-                                                        <input value={booking.End} onChange={(e)=>setBooking({...booking, userId: user, roomId: id, End: e.target.value})} type="date" className="form-control" />
+                                                        <input value={booking.End} onChange={(e)=>setBooking({...booking, userId: user, roomId: id, End: e.target.value})} type="date" className="form-control" required/>
                                                     </div>
                                                     <select value={booking.Guests} onChange={(e)=>setBooking({...booking, userId: user, roomId: id, Guests: e.target.value})} className="form-control my-2">
                                                         <option>1 Guest</option>
