@@ -38,6 +38,84 @@ export default function Home() {
 
                 </div>
                 <Rooms />
+                <div className="container mt-5" >
+                   <h1 className="my-2">Explore nearby</h1>
+                   <div className="row">
+                      <div className="col-lg-3 col-md-3 my-2 col-12 mx-auto">
+                         <div className="row  d-flex" style={{justifyContent: "space-evenly"}}>
+                              <img src="https://a0.muscache.com/im/pictures/7c424b7e-0f02-4282-93cf-c5fc5e5e157d.jpg?im_q=medq&im_w=240" style={{width: "70px", height: "70px",borderRadius:"14px"}}/>
+                              <div className="exploreDesk">
+                               <Link to="/search/jaipur">Jaipur</Link>
+                               <p>9 hours drive</p>
+                              </div>                             
+                         </div>
+                      </div>
+                      <div className="col-lg-3 col-md-3 my-2 col-12 mx-auto">
+                         <div className="row  d-flex" style={{justifyContent: "space-evenly"}}>
+                              <img src="https://a0.muscache.com/im/pictures/7c424b7e-0f02-4282-93cf-c5fc5e5e157d.jpg?im_q=medq&im_w=240" style={{width: "70px", height: "70px",borderRadius:"14px"}}/>
+                              <div className="exploreDesk">
+                               <Link to="/search/delhi">Delhi</Link>
+                               <p>9 hours drive</p>
+                              </div>                             
+                         </div>
+                      </div>
+                      <div className="col-lg-3 col-md-3 my-2 col-12 mx-auto">
+                         <div className="row  d-flex" style={{justifyContent: "space-evenly"}}>
+                              <img src="https://a0.muscache.com/im/pictures/7c424b7e-0f02-4282-93cf-c5fc5e5e157d.jpg?im_q=medq&im_w=240" style={{width: "70px", height: "70px",borderRadius:"14px"}}/>
+                              <div className="exploreDesk">
+                               
+                               <Link to="/search/Mumbai">Mumbai</Link>
+                               <p>9 hours drive</p>
+                              </div>                             
+                         </div>
+                      </div>
+                      <div className="col-lg-3 col-md-3 my-2 col-12 mx-auto">
+                         <div className="row  d-flex" style={{justifyContent: "space-evenly"}}>
+                              <img src="https://a0.muscache.com/im/pictures/7c424b7e-0f02-4282-93cf-c5fc5e5e157d.jpg?im_q=medq&im_w=240" style={{width: "70px", height: "70px",borderRadius:"14px"}}/>
+                              <div className="exploreDesk">
+                               <Link to="/search/Shimla">shimla</Link>
+                               <p>9 hours drive</p>
+                              </div>                             
+                         </div>
+                      </div>
+                      <div className="col-lg-3 col-md-3 my-2 col-12 mx-auto">
+                         <div className="row  d-flex" style={{justifyContent: "space-evenly"}}>
+                              <img src="https://a0.muscache.com/im/pictures/7c424b7e-0f02-4282-93cf-c5fc5e5e157d.jpg?im_q=medq&im_w=240" style={{width: "70px", height: "70px",borderRadius:"14px"}}/>
+                              <div className="exploreDesk">
+                               <Link to="/search/Ajmer">Ajmer</Link>
+                               <p>9 hours drive</p>
+                              </div>                             
+                         </div>
+                      </div>
+                      <div className="col-lg-3 col-md-3 my-2 col-12 mx-auto">
+                         <div className="row  d-flex" style={{justifyContent: "space-evenly"}}>
+                              <img src="https://a0.muscache.com/im/pictures/7c424b7e-0f02-4282-93cf-c5fc5e5e157d.jpg?im_q=medq&im_w=240" style={{width: "70px", height: "70px",borderRadius:"14px"}}/>
+                              <div className="exploreDesk">
+                               <Link to="/search/Jodhpur">Jodhpur</Link>
+                               <p>9 hours drive</p>
+                              </div>                             
+                         </div>
+                      </div>
+                      <div className="col-lg-3 col-md-3 my-2 col-12 mx-auto">
+                         <div className="row  d-flex" style={{justifyContent: "space-evenly"}}>
+                              <img src="https://a0.muscache.com/im/pictures/7c424b7e-0f02-4282-93cf-c5fc5e5e157d.jpg?im_q=medq&im_w=240" style={{width: "70px", height: "70px",borderRadius:"14px"}}/>
+                              <div className="exploreDesk">
+                               <Link to="/search/kota">kota</Link>
+                               <p>9 hours drive</p>
+                              </div>                             
+                         </div>
+                      </div>
+                      <div className="col-lg-3 col-md-3 my-2 col-12 mx-auto">
+                         <div className="row  d-flex" style={{justifyContent: "space-evenly"}}>
+                              <img src="https://a0.muscache.com/im/pictures/7c424b7e-0f02-4282-93cf-c5fc5e5e157d.jpg?im_q=medq&im_w=240" style={{width: "70px", height: "70px",borderRadius:"14px"}}/>
+                              <div className="exploreDesk"> 
+                               <Link to="/search/Alwar">Alwar</Link>
+                               <p>9 hours drive</p>
+                              </div>                             
+                         </div>
+                      </div>
+                   </div>
+                </div>
             </div>
 
         </>
