@@ -48,7 +48,7 @@ export default function Header({ user }) {
                     <div className="navbar-row">
 
                         <Link className="navbar-brand " to="/"><img className="logoImg" src="https://i.pinimg.com/originals/5b/79/a5/5b79a5dfc44312c61e10d0044ffb4323.png" />Airbnb</Link>
-                       
+
                         <form className={navbarForm + " form-inline headerForm col-lg-4 my-2 my-lg-0"} onSubmit={onHandleSubmit}>
                             <input className="form-control mr-sm-2" type="search" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Where are you going?" aria-label="Search" required />
                             {
@@ -67,18 +67,21 @@ export default function Header({ user }) {
                                 <li className="nav-item mx-2 ">
                                     <div className="dropdown">
                                         <button className="btn btn-light dropDownButton" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                           <DehazeIcon/>
-                                           <AccountCircleIcon/>
-                                           
-  </button>
-  <li className="nav-item mx-2 dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    {authCheck() ?
-                                        <Link className="nav-link text-center " to="/Auth" onClick={logoutClick}>LogOut</Link> : <Link className="nav-link  text-center" to="/Auth">Login</Link>
-                                    }
-                                </li>
+                                            <DehazeIcon />
+                                            <AccountCircleIcon />
+
+                                        </button>
+                                        <ul>
+
+                                            <li className="nav-item mx-2 dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                {authCheck() ?
+                                                    <Link className="nav-link text-center " to="/Auth" onClick={logoutClick}>LogOut</Link> : <Link className="nav-link  text-center" to="/Auth">Login</Link>
+                                                }
+                                            </li>
+                                        </ul>
                                     </div>
                                 </li>
-                               
+
                             </ul>
 
                         </div>
