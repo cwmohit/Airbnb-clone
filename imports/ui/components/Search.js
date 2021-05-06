@@ -9,7 +9,7 @@ export default function Search() {
     const searchResult = useTracker(() => RoomCollection.find({ city: searchKey }).fetch());
     
     return (
-        <div className="container mt-5">
+        <div className="container searchContainer ">
             {
               searchResult.length ? 
                  searchResult.map(room =>

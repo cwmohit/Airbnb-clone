@@ -1,0 +1,19 @@
+.navbarbg{
+    background: white;
+    
+}
+
+.logoImg{
+    height: 30px;
+    width: 30px;
+    margin-right: 8px;
+}
+.navbar-row{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.navItemRow{
+    display: flex;
+    flex-direction: row;
+}

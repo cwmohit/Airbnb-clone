@@ -4,11 +4,13 @@ body {
   font-family: sans-serif;
 }
 .homeImg{
-  background: url('https://images.unsplash.com/photo-1542681575-352258e0c854?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+  background: url('https://a0.muscache.com/im/pictures/bb36473b-4c84-4c40-9468-dc9be329580f.jpg?im_w=960');
     background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
-      min-height: 60vh;
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column-reverse;
 }
 .roomHeader{
   background-size: cover;
@@ -35,4 +37,27 @@ body {
 }
 .card{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px!important;
+}
+p.lead{
+  font-size: 70px;
+  margin: 0;
+  padding: 0;
+}
+
+.dropDownButton{
+  display: flex!important;
+  border-radius: 20px!important;
+}
+.searchContainer{
+  margin-top: 76px;
+}
+
+.searchBtn{
+  border-radius: 20px!important;
+    margin: auto!important;
+    display: flex!important;
+    cursor: pointer;
+}
+.searchBtn:hover{
+  background: skyblue!important;
 }
