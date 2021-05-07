@@ -4,7 +4,8 @@
         "MONGO_URL": "mongodb+srv://admin:admin1211@cluster0.pyopf.mongodb.net/Airbnb-clone?retryWrites=true&w=majority",
         "MONGO_OPLOG_URL": "mongodb+srv://admin:admin1211@cluster0.pyopf.mongodb.net/Airbnb-clone?retryWrites=true&w=majority",
         "APM_*": "Various",
-        "ROOT_URL": "airbnb-by-mohit.meteorapp.com"
+        "ROOT_URL": "airbnb-by-mohit.meteorapp.com",
+        "METEOR_SETTINGS": "production"
       }
     }
   }

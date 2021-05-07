@@ -1,0 +1,18 @@
+.LiveAnywhereImage{
+    border-radius: 24px;
+    border: none;
+}
+.becomeHostImage{
+    background: url('https://a0.muscache.com/im/pictures/2595054e-d1d9-4fde-8046-58d51fcb3164.jpg?im_w=1200');
+    background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      min-height: 400px;
+      border-radius: 35px;
+}
+.hostHeading{
+    font-size: 40px;
+}
+.hostDes{
+    font-size: 20px;
+}
