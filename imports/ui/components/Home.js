@@ -41,8 +41,8 @@ export default function Home() {
                 <div className="container mt-5" >
                    <h1 className="my-2">Explore nearby</h1>
                    <div className="row">
-                      <div className="col-lg-3 col-md-3 my-2 col-12 mx-auto">
-                         <div className="row  d-flex" style={{justifyContent: "center"}}>
+                      <div className="col-lg-3 col-md-3 my-2 col-10 mx-auto ">
+                         <div className="row  d-flex" >
                               <img src="https://a0.muscache.com/im/pictures/7c424b7e-0f02-4282-93cf-c5fc5e5e157d.jpg?im_q=medq&im_w=240" style={{width: "70px", height: "70px",borderRadius:"14px", marginRight: "12px"}}/>
                               <div className="exploreDesk">
                                <Link to="/search/jaipur">Jaipur</Link>
@@ -50,8 +50,8 @@ export default function Home() {
                               </div>                             
                          </div>
                       </div>
-                      <div className="col-lg-3 col-md-3 my-2 col-12 mx-auto">
-                         <div className="row  d-flex" style={{justifyContent: "center"}}>
+                      <div className="col-lg-3 col-md-3 my-2 col-10 mx-auto ">
+                         <div className="row  d-flex" >
                               <img src="https://a0.muscache.com/im/pictures/7c424b7e-0f02-4282-93cf-c5fc5e5e157d.jpg?im_q=medq&im_w=240" style={{width: "70px", height: "70px",borderRadius:"14px", marginRight: "12px"}}/>
                               <div className="exploreDesk">
                                <Link to="/search/delhi">Delhi</Link>
@@ -59,8 +59,8 @@ export default function Home() {
                               </div>                             
                          </div>
                       </div>
-                      <div className="col-lg-3 col-md-3 my-2 col-12 mx-auto">
-                         <div className="row  d-flex" style={{justifyContent: "center"}}>
+                      <div className="col-lg-3 col-md-3 my-2 col-10 mx-auto ">
+                         <div className="row  d-flex" >
                               <img src="https://a0.muscache.com/im/pictures/7c424b7e-0f02-4282-93cf-c5fc5e5e157d.jpg?im_q=medq&im_w=240" style={{width: "70px", height: "70px",borderRadius:"14px", marginRight: "12px"}}/>
                               <div className="exploreDesk">
                                
@@ -69,8 +69,8 @@ export default function Home() {
                               </div>                             
                          </div>
                       </div>
-                      <div className="col-lg-3 col-md-3 my-2 col-12 mx-auto">
-                         <div className="row  d-flex" style={{justifyContent: "center"}}>
+                      <div className="col-lg-3 col-md-3 my-2 col-10 mx-auto ">
+                         <div className="row  d-flex" >
                               <img src="https://a0.muscache.com/im/pictures/7c424b7e-0f02-4282-93cf-c5fc5e5e157d.jpg?im_q=medq&im_w=240" style={{width: "70px", height: "70px",borderRadius:"14px", marginRight: "12px"}}/>
                               <div className="exploreDesk">
                                <Link to="/search/Shimla">shimla</Link>
@@ -78,8 +78,8 @@ export default function Home() {
                               </div>                             
                          </div>
                       </div>
-                      <div className="col-lg-3 col-md-3 my-2 col-12 mx-auto">
-                         <div className="row  d-flex" style={{justifyContent: "center"}}>
+                      <div className="col-lg-3 col-md-3 my-2 col-10 mx-auto ">
+                         <div className="row  d-flex" >
                               <img src="https://a0.muscache.com/im/pictures/7c424b7e-0f02-4282-93cf-c5fc5e5e157d.jpg?im_q=medq&im_w=240" style={{width: "70px", height: "70px",borderRadius:"14px", marginRight: "12px"}}/>
                               <div className="exploreDesk">
                                <Link to="/search/Ajmer">Ajmer</Link>
@@ -87,8 +87,8 @@ export default function Home() {
                               </div>                             
                          </div>
                       </div>
-                      <div className="col-lg-3 col-md-3 my-2 col-12 mx-auto">
-                         <div className="row  d-flex" style={{justifyContent: "center"}}>
+                      <div className="col-lg-3 col-md-3 my-2 col-10 mx-auto ">
+                         <div className="row  d-flex" >
                               <img src="https://a0.muscache.com/im/pictures/7c424b7e-0f02-4282-93cf-c5fc5e5e157d.jpg?im_q=medq&im_w=240" style={{width: "70px", height: "70px",borderRadius:"14px", marginRight: "12px"}}/>
                               <div className="exploreDesk">
                                <Link to="/search/Jodhpur">Jodhpur</Link>
@@ -96,8 +96,8 @@ export default function Home() {
                               </div>                             
                          </div>
                       </div>
-                      <div className="col-lg-3 col-md-3 my-2 col-12 mx-auto">
-                         <div className="row  d-flex" style={{justifyContent: "center"}}>
+                      <div className="col-lg-3 col-md-3 my-2 col-10 mx-auto ">
+                         <div className="row  d-flex" >
                               <img src="https://a0.muscache.com/im/pictures/7c424b7e-0f02-4282-93cf-c5fc5e5e157d.jpg?im_q=medq&im_w=240" style={{width: "70px", height: "70px",borderRadius:"14px", marginRight: "12px"}}/>
                               <div className="exploreDesk">
                                <Link to="/search/kota">kota</Link>
@@ -105,8 +105,8 @@ export default function Home() {
                               </div>                             
                          </div>
                       </div>
-                      <div className="col-lg-3 col-md-3 my-2 col-12 mx-auto">
-                         <div className="row  d-flex" style={{justifyContent: "center"}}>
+                      <div className="col-lg-3 col-md-3 my-2 col-10 mx-auto ">
+                         <div className="row  d-flex" >
                               <img src="https://a0.muscache.com/im/pictures/7c424b7e-0f02-4282-93cf-c5fc5e5e157d.jpg?im_q=medq&im_w=240" style={{width: "70px", height: "70px",borderRadius:"14px", marginRight: "12px"}}/>
                               <div className="exploreDesk"> 
                                <Link to="/search/Alwar">Alwar</Link>
