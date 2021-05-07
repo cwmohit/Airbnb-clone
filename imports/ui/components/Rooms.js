@@ -30,7 +30,7 @@ export default function Rooms() {
         }).fetch()
     );
 
-    const renderDefault = defaultrooms.map(room => <div key={room._id} className="col-lg-4 col-md-4 my-2">
+    const renderDefault = defaultrooms.map(room => <div key={room._id} className="col-lg-4 col-md-6 my-2">
         <div className="card" >
             <img className="card-img-top" src={room.selectedFile} alt="Card image cap" style={{ height: "250px" }} />
             <div className="card-body">
@@ -49,7 +49,7 @@ export default function Rooms() {
     </div>
     )
 
-    const renderbyPriceAccending = sortbypriceAccending.map(room => <div key={room._id} className="col-lg-4 col-md-4 my-2">
+    const renderbyPriceAccending = sortbypriceAccending.map(room => <div key={room._id} className="col-lg-4 col-md-6 my-2">
         <div className="card" >
             <img className="card-img-top" src={room.selectedFile} alt="Card image cap" style={{ height: "250px" }} />
             <div className="card-body">
@@ -68,7 +68,7 @@ export default function Rooms() {
     </div>
     )
 
-    const renderbyPriceDesending = sortbypriceDesending.map(room => <div key={room._id} className="col-lg-4 col-md-4 my-2">
+    const renderbyPriceDesending = sortbypriceDesending.map(room => <div key={room._id} className="col-lg-4 col-md-6 my-2">
         <div className="card" >
             <img className="card-img-top" src={room.selectedFile} alt="Card image cap" style={{ height: "250px" }} />
             <div className="card-body">
@@ -87,7 +87,7 @@ export default function Rooms() {
     </div>
     )
 
-    const renderRatingAccending = sortbyratingAccending.map(room => <div key={room._id} className="col-lg-4 col-md-4 my-2">
+    const renderRatingAccending = sortbyratingAccending.map(room => <div key={room._id} className="col-lg-4 col-md-6 my-2">
     <div className="card" >
         <img className="card-img-top" src={room.selectedFile} alt="Card image cap" style={{ height: "250px" }} />
         <div className="card-body">
@@ -106,7 +106,7 @@ export default function Rooms() {
 </div>
 )
 
-    const renderRatingDesending = sortbyratingDesending.map(room => <div key={room._id} className="col-lg-4 col-md-4 my-2">
+    const renderRatingDesending = sortbyratingDesending.map(room => <div key={room._id} className="col-lg-4 col-md-6 my-2">
         <div className="card" >
             <img className="card-img-top" src={room.selectedFile} alt="Card image cap" style={{ height: "250px" }} />
             <div className="card-body">

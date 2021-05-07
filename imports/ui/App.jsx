@@ -42,7 +42,7 @@ useEffect(() => {
     <Route path='/' exact component={()=><Home />}/>
     <Route path='/Room/:id' component={Room}/> 
        <Route path='/search/:searchKey' component={Search}/>
-  <Route path='/host' component={Host}/>
+  <Route path='/host' render={()=>JSON.parse(localStorage.getItem("user")).userLogin==="true"? <Host />: <Redirect to='/Auth'/> }/>
    <UserContext.Provider value={setUser}>
     <Route path='/Auth' exact render={()=>JSON.parse(localStorage.getItem("user")).userLogin==="true"?<Redirect to='/' />: <Auth/>}/>
    </UserContext.Provider>

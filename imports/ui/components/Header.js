@@ -50,9 +50,9 @@ export default function Header({ user }) {
                         <Link className="navbar-brand text-dark " to="/"><img className="logoImg" src="https://i.pinimg.com/originals/5b/79/a5/5b79a5dfc44312c61e10d0044ffb4323.png" />Airbnb</Link>
 
                         <form className={navbarForm + " form-inline headerForm col-lg-4 my-2 my-lg-0 "} onSubmit={onHandleSubmit}>
-                            <input className="form-control mr-sm-2" type="search" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Where are you going?" aria-label="Search" required />
+                            <input className="form-control headerInput mr-sm-2" type="search" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Where are you going?" aria-label="Search" required />
                             {
-                                search === "" ? <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> : <Link to={"/search/" + search}>
+                                search === "" ? <button className="btn btn-circle btn-outline-success my-2 my-sm-0" type="submit">Search</button> : <Link to={"/search/" + search}>
                                     <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                                 </Link>
                             }

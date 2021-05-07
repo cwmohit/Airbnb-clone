@@ -139,7 +139,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="container mt-5">
-                    <div className="becomeHostImage row">
+                    <div className="becomeHostImage mx-2 row">
                       <div className="col-lg-5 ml-lg-4 ml-md-2 ml-1 col-md-5 col-10 my-auto">
                          <h2 className="text-white  font-weight-bold hostHeading" >Become a Host</h2>
                          <p className="text-white  hostDes">Earn extra income and unlock upportunities by sharing your space</p>
@@ -148,23 +148,23 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="container mt-5 mb-3" >
-                   <h1 className="font-weight-bold mb-2">Discover Experiences</h1>
-                   <h3>Unique activities with local experts – in person or online.</h3>
+                   <h2 className="font-weight-bold mb-2">Discover Experiences</h2>
+                   <h5>Unique activities with local experts – in person or online.</h5>
                     <div className="row">
                         <div className="col-lg-4 col-md-4 col-10 m-auto">
                           <img src="https://a0.muscache.com/im/pictures/247a1ea3-946d-4eb8-a6ab-e8b9a66846f4.jpg?im_w=320" className="LiveAnywhereImage img-thumbnail" />
                           <h5 className="ml-3 mt-1">Featured Collection: Wanderlust</h5>
-                          <p className="ml-3 mt-1">Travel from home with online Experience</p>
+                          <p className="ml-3 text-muted mt-1">Travel from home with online Experience</p>
                         </div>
                         <div className="col-lg-4 col-md-4 col-10 m-auto">
                           <img src="https://a0.muscache.com/im/pictures/a6b08861-feb8-4a01-a76d-b33d2867b441.jpg?im_w=320" className="LiveAnywhereImage img-thumbnail" />
                           <h5 className="ml-3 mt-1">Online Experience</h5>
-                          <p className="ml-3 mt-1">Travel from home with online Experience</p>
+                          <p className="ml-3 text-muted  mt-1">Travel from home with online Experience</p>
                         </div>
                         <div className="col-lg-4 col-md-4 col-10 m-auto">
                           <img src="https://a0.muscache.com/im/pictures/ad109d56-2421-40cd-98e6-e114160dc85b.jpg?im_w=320" className="LiveAnywhereImage img-thumbnail" />
                           <h5 className="ml-3 mt-1">Experiences</h5>
-                          <p className="ml-3 mt-1">Travel from home with online Experience</p>
+                          <p className="ml-3 text-muted  mt-1">Travel from home with online Experience</p>
                         </div>
                        
                     </div>
