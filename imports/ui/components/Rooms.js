@@ -128,7 +128,7 @@ export default function Rooms() {
         <div className="container">
             <div className="container-fluid">
                 <div className="row my-3">
-                    <div className="col-lg-4 m-auto col-md-4 col-6">
+                    <div className="col-lg-5 m-auto col-md-5 col-12">
 
                     <div className="d-flex" style={{justifyContent: "space-around"}}> 
 
@@ -150,8 +150,8 @@ export default function Rooms() {
                     </div>
                         <select onChange={(e) => setSort({...sort,sortOrder: e.target.value})} className="form-control" id="exampleFormControlSelect1">
                             <option defaultValue>Choose...</option>
-                            <option>Accending</option>
-                            <option>Desending</option>
+                            <option value="Accending">Ascending</option>
+                            <option value="Desending">Descending</option>
                         </select>
                     </div>
                 </div>

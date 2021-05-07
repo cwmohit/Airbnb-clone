@@ -7,6 +7,7 @@ import Room from './components/Room.js';
 import Search from './components/Search.js';
 import Footer from './components/Footer';
 import ScrollTop from './components/ScrollTop';
+import Host from './components/Host';
 export const UserContext=React.createContext();
 export const App = () => {
   const [user,setUser] = useState({
@@ -41,9 +42,11 @@ useEffect(() => {
     <Route path='/' exact component={()=><Home />}/>
     <Route path='/Room/:id' component={Room}/> 
        <Route path='/search/:searchKey' component={Search}/>
+  <Route path='/host' component={Host}/>
    <UserContext.Provider value={setUser}>
     <Route path='/Auth' exact render={()=>JSON.parse(localStorage.getItem("user")).userLogin==="true"?<Redirect to='/' />: <Auth/>}/>
    </UserContext.Provider>
+  
     <h1>Welcome to Mohit!</h1>
   </Switch> 
   <Footer/>

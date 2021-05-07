@@ -10,12 +10,12 @@ export default function Header({ user }) {
     const [bgNavbar, setBgNavbar] = useState("");
     const [navbarForm, setNavbarForm] = useState("d-none");
     handleScroll = () => {
-        if (window.scrollY > 20) {
+        if (window.scrollY > 40) {
             setBgNavbar("navbarbg")
-            setNavbarForm("d-block")
+            setNavbarForm("d-md-block d-none")
         } else {
             setBgNavbar("")
-            setNavbarForm("d-none")
+            setNavbarForm("d-md-none d-none")
         }
     };
     useEffect(() => {
@@ -47,9 +47,9 @@ export default function Header({ user }) {
                 <div className="container " >
                     <div className="navbar-row">
 
-                        <Link className="navbar-brand " to="/"><img className="logoImg" src="https://i.pinimg.com/originals/5b/79/a5/5b79a5dfc44312c61e10d0044ffb4323.png" />Airbnb</Link>
+                        <Link className="navbar-brand text-dark " to="/"><img className="logoImg" src="https://i.pinimg.com/originals/5b/79/a5/5b79a5dfc44312c61e10d0044ffb4323.png" />Airbnb</Link>
 
-                        <form className={navbarForm + " form-inline headerForm col-lg-4 my-2 my-lg-0"} onSubmit={onHandleSubmit}>
+                        <form className={navbarForm + " form-inline headerForm col-lg-4 my-2 my-lg-0 "} onSubmit={onHandleSubmit}>
                             <input className="form-control mr-sm-2" type="search" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Where are you going?" aria-label="Search" required />
                             {
                                 search === "" ? <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> : <Link to={"/search/" + search}>
@@ -61,8 +61,8 @@ export default function Header({ user }) {
 
                         <div className="navItemRow d-flex" id="navbarSupportedContent">
                             <ul className="navbar-nav navItemRow ml-auto">
-                                <li className="nav-item mx-2">
-                                    <Link className="nav-link" to="/">Home </Link>
+                                <li className="nav-item mx-2 d-md-block d-none">
+                                    <Link className="nav-link text-dark" to="/host">Become a host </Link>
                                 </li>
                                 <li className="nav-item mx-2 ">
                                     <div className="dropdown">
@@ -71,12 +71,15 @@ export default function Header({ user }) {
                                             <AccountCircleIcon />
 
                                         </button>
-                                        <ul>
+                                        <ul className="dropdown-menu">
 
-                                            <li className="nav-item mx-2 dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <li className="nav-item mx-2 dropdown-item" aria-labelledby="dropdownMenuButton">
                                                 {authCheck() ?
-                                                    <Link className="nav-link text-center " to="/Auth" onClick={logoutClick}>LogOut</Link> : <Link className="nav-link  text-center" to="/Auth">Login</Link>
+                                                    <Link className="nav-link  " to="/Auth" onClick={logoutClick}>LogOut</Link> : <Link className="nav-link  " to="/Auth">Login</Link>
                                                 }
+                                            </li>
+                                            <li className="nav-item mx-2 d-md-none d-block dropdown-item">
+                                                <Link className="nav-link text-dark" to="/host">Become a host </Link>
                                             </li>
                                         </ul>
                                     </div>
