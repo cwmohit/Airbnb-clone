@@ -13,7 +13,8 @@ export default function Search() {
             <div className="row">
                 <div className="col-12 m-auto">
                    <div className="row">
-                       <div className="col-7">
+                       <div className="col-lg-7 col-md-7 col-12">
+                           <h1 className="font-weight-bold container my-3">Stays In {searchKey}</h1>
                        {
                 searchResult.length ?
                     searchResult.map(room =>
