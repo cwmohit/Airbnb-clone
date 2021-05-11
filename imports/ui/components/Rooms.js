@@ -30,9 +30,9 @@ export default function Rooms() {
         }).fetch()
     );
 
-    const renderDefault = defaultrooms.map(room => <div key={room._id} className="col-lg-4 col-md-6 my-2">
-        <div className="card" >
-            <img className="card-img-top" src={room.selectedFile} alt="Card image cap" style={{ height: "250px" }} />
+    const renderDefault = defaultrooms.map(room => <div key={room._id} className="col-lg-4 col-md-6 col-10 mx-auto  my-2">
+        <div className="card roomCard" >
+            <img className="card-img-top roomImgHome" src={room.selectedFile} alt="Card image cap" style={{ height: "250px" }} />
             <div className="card-body">
                 <div className="card-title" style={{ display: "flex", justifyContent: "space-between" }}>
                     <h5>{room.title}</h5>
@@ -49,9 +49,9 @@ export default function Rooms() {
     </div>
     )
 
-    const renderbyPriceAccending = sortbypriceAccending.map(room => <div key={room._id} className="col-lg-4 col-md-6 my-2">
-        <div className="card" >
-            <img className="card-img-top" src={room.selectedFile} alt="Card image cap" style={{ height: "250px" }} />
+    const renderbyPriceAccending = sortbypriceAccending.map(room => <div key={room._id} className="col-lg-4 col-md-6 col-10 mx-auto  my-2">
+        <div className="card roomCard" >
+            <img className="card-img-top roomImgHome" src={room.selectedFile} alt="Card image cap" style={{ height: "250px" }} />
             <div className="card-body">
                 <div className="card-title" style={{ display: "flex", justifyContent: "space-between" }}>
                     <h5>{room.title}</h5>
@@ -68,9 +68,9 @@ export default function Rooms() {
     </div>
     )
 
-    const renderbyPriceDesending = sortbypriceDesending.map(room => <div key={room._id} className="col-lg-4 col-md-6 my-2">
-        <div className="card" >
-            <img className="card-img-top" src={room.selectedFile} alt="Card image cap" style={{ height: "250px" }} />
+    const renderbyPriceDesending = sortbypriceDesending.map(room => <div key={room._id} className="col-lg-4 col-md-6 col-10 mx-auto  my-2">
+        <div className="card roomCard" >
+            <img className="card-img-top roomImgHome" src={room.selectedFile} alt="Card image cap" style={{ height: "250px" }} />
             <div className="card-body">
                 <div className="card-title" style={{ display: "flex", justifyContent: "space-between" }}>
                     <h5>{room.title}</h5>
@@ -87,9 +87,9 @@ export default function Rooms() {
     </div>
     )
 
-    const renderRatingAccending = sortbyratingAccending.map(room => <div key={room._id} className="col-lg-4 col-md-6 my-2">
-    <div className="card" >
-        <img className="card-img-top" src={room.selectedFile} alt="Card image cap" style={{ height: "250px" }} />
+    const renderRatingAccending = sortbyratingAccending.map(room => <div key={room._id} className="col-lg-4 col-md-6 col-10 mx-auto  my-2">
+    <div className="card roomCard" >
+        <img className="card-img-top roomImgHome" src={room.selectedFile} alt="Card image cap" style={{ height: "250px" }} />
         <div className="card-body">
             <div className="card-title" style={{ display: "flex", justifyContent: "space-between" }}>
                 <h5>{room.title}</h5>
@@ -106,9 +106,9 @@ export default function Rooms() {
 </div>
 )
 
-    const renderRatingDesending = sortbyratingDesending.map(room => <div key={room._id} className="col-lg-4 col-md-6 my-2">
-        <div className="card" >
-            <img className="card-img-top" src={room.selectedFile} alt="Card image cap" style={{ height: "250px" }} />
+    const renderRatingDesending = sortbyratingDesending.map(room => <div key={room._id} className="col-lg-4 col-md-6 col-10 mx-auto  my-2">
+        <div className="card roomCard" >
+            <img className="card-img-top roomImgHome" src={room.selectedFile} alt="Card image cap" style={{ height: "250px" }} />
             <div className="card-body">
                 <div className="card-title" style={{ display: "flex", justifyContent: "space-between" }}>
                     <h5>{room.title}</h5>
@@ -125,8 +125,8 @@ export default function Rooms() {
     </div>
     )
     return (
-        <div className="container">
-            <div className="container-fluid">
+        <div className="row">
+            <div className="col-11 m-auto">
                 <div className="row my-3">
                     <div className="col-lg-5 m-auto col-md-5 col-12">
 

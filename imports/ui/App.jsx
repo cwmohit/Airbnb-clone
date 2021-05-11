@@ -8,6 +8,7 @@ import Search from './components/Search.js';
 import Footer from './components/Footer';
 import ScrollTop from './components/ScrollTop';
 import Host from './components/Host';
+import Inspired from './components/Inspired';
 export const UserContext=React.createContext();
 export const App = () => {
   const [user,setUser] = useState({
@@ -18,9 +19,6 @@ useEffect(() => {
    
   if(user.userLogin===false){
     if(!localStorage.getItem("user")){
-      localStorage.setItem("user", JSON.stringify({userLogin: false, _id: "" }));
-    }
-    if( JSON.parse(localStorage.getItem("user")).userLogin===null) {
       localStorage.setItem("user", JSON.stringify({userLogin: false, _id: "" }));
     }
     if( JSON.parse(localStorage.getItem("user")).userLogin!==false) {
@@ -43,6 +41,7 @@ useEffect(() => {
     <Route path='/Room/:id' component={Room}/> 
        <Route path='/search/:searchKey' component={Search}/>
   <Route path='/host' render={()=>JSON.parse(localStorage.getItem("user")).userLogin==="true"? <Host />: <Redirect to='/Auth'/> }/>
+  <Route path="/inspired" component={Inspired}/>
    <UserContext.Provider value={setUser}>
     <Route path='/Auth' exact render={()=>JSON.parse(localStorage.getItem("user")).userLogin==="true"?<Redirect to='/' />: <Auth/>}/>
    </UserContext.Provider>
