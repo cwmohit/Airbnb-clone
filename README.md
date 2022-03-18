@@ -15,3 +15,8 @@ Tasks - listing, searching, sorting by price and rating, reviews, book
 
      meteor run
      Visit to http://localhost:3000/
+
+
+## Demo 
+
+https://user-images.githubusercontent.com/65109464/158939352-1063ffac-a19e-4d6d-8d89-a27de32e35d3.mp4
